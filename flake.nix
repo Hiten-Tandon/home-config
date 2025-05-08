@@ -2,25 +2,39 @@
   description = "This is for home-manager";
 
   inputs = {
-    home-manager.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { home-manager, flake-utils, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
+  outputs =
+    {
+      home-manager,
+      flake-utils,
+      nixpkgs,
+      ...
+    }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
       let
-        configTOML = builtins.fromTOML (builtins.readDir ./config.toml);
+        pkgs = import nixpkgs { inherit system; };
+        configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
-        pkgs = import home-manager.nixpkgs { inherit system; };
-      in {
-        legacyPackages.homeConfigurations.${user.username} =
-          home-manager.lib.homeManagerConfiguration {
-            inherit pkgs;
-            modules = [ ./common ]
-              ++ pkgs.lib.optional pkgs.stdenv.isLinux ./linux
-              ++ pkgs.lib.optional pkgs.stdenv.isDarwin ./darwin
-              ++ pkgs.lib.optional pkgs.stdenv.isBSD ./bsd
-              ++ pkgs.lib.optional pkgs.stdenv.isCygwin ./cygwin;
+      in
+      with pkgs;
+      {
+        legacyPackages.homeConfigurations.${user.username} = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            inherit user;
           };
-      });
+          modules =
+            [ ./common ]
+            ++ lib.optional stdenv.isLinux ./linux
+            ++ lib.optional stdenv.isDarwin ./darwin
+            ++ lib.optional stdenv.isBSD ./bsd
+            ++ lib.optional stdenv.isCygwin ./cygwin;
+        };
+        formatter = nixfmt-tree;
+      }
+    );
 }
