@@ -274,12 +274,18 @@
         export def home-rbld [
           --update-flake(-u) # Update the flake before updating the configuration
         ] {
-          rm $"($env.HOME)/.gtkrc-2.0"  $"($env.HOME)/.gtkrc-2.0.backup"
+          try {
+            rm $"($env.HOME)/.gtkrc-2.0"
+            rm $"($env.HOME)/.gtkrc-2.0.backup"
+          }
           cd $"($env.HOME)/projects/nixos-config/home-manager"
           if $update_flake {
             nix flake update
           }
           home-manager switch --flake ".#${user.username}"
+          if ((git status --short) | str length) != 0 {
+            lazygit
+          }
         }
 
         fastfetch

@@ -67,18 +67,47 @@
         "type": "github"
       }
     },
+    "darwin-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-I1rb53M08ImqfBjq+QEp7XpqXE4ejtai6POVZyhdP1g=",
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/fdm.dmg"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/fdm.dmg"
+      }
+    },
+    "dmg-control": {
+      "locked": {
+        "lastModified": 1748098817,
+        "narHash": "sha256-PFn0WEeIsjiFKrSJfkR1F9/ItVEs1nlrw1KwEexF+/0=",
+        "owner": "InvraNet",
+        "repo": "dmg-control-nix",
+        "rev": "60606f54d3bc4ab2c909f0863df7bceb64a537a4",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "InvraNet",
+        "repo": "dmg-control-nix",
+        "type": "gitlab"
+      }
+    },
     "fdm": {
       "inputs": {
+        "darwin-src": "darwin-src",
+        "dmg-control": "dmg-control",
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "src": "src"
+        "linux-src": "linux-src",
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1748162522,
-        "narHash": "sha256-2OqcIdkk1Muw48kqJMZNQljorzoYj4yO1MduTvlD2co=",
+        "lastModified": 1748168667,
+        "narHash": "sha256-mD+D+oalEcvfO6ggsjItbIH4e5uCi9D4qi5ofuQNnLU=",
         "owner": "hiten-tandon",
         "repo": "freedownloadmanager-nix",
-        "rev": "b3284d15f956a9ee6bc15f447ef79584166259c5",
+        "rev": "1bc4ead838cc65a628d3c1f4afa66aaec0648289",
         "type": "github"
       },
       "original": {
@@ -382,6 +411,18 @@
         "type": "github"
       }
     },
+    "linux-src": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-HMvrt5JAM+IuxpR929MpdR0eq6YeoseyIwtVg6WSKDg=",
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1748026106,
@@ -532,18 +573,6 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
-      }
-    },
-    "src": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-HMvrt5JAM+IuxpR929MpdR0eq6YeoseyIwtVg6WSKDg=",
-        "type": "file",
-        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://files2.freedownloadmanager.org/6/latest/freedownloadmanager.deb"
       }
     },
     "stylix": {
