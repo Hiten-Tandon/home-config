@@ -15,7 +15,10 @@ with pkgs;
       useFetchCargoVendor = true;
 
       nativeBuildInputs = [ pkg-config ] ++ lib.optionals stdenv.cc.isClang [ rustPlatform.bindgenHook ];
-      buildInputs = [ openssl fontconfig ];
+      buildInputs = [
+        openssl
+        fontconfig
+      ];
       cargoBuildFlags = [ "--package nu_plugin_${name}" ];
 
       passthru.updateScript = nix-update-script {

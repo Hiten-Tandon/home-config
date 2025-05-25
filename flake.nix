@@ -20,7 +20,7 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [zen.overlay];
+          overlays = [ zen.overlay ];
         };
         configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
