@@ -2,6 +2,6 @@
 {
   home = {
     homeDirectory = "/home/${user.username}";
-    packages = [ pkgs.zen ];
+    packages = with pkgs; [ zen free-download-manager ];
   };
 }

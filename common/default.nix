@@ -3,23 +3,86 @@
   user,
   ...
 }:
-rec {
+{
   home = {
     inherit (user) username;
     stateVersion = "25.05";
-    sessionVariables = {
-      EDITOR = "${pkgs.helix}/bin/hx";
-      GIT_EDITOR = "${pkgs.helix}/bin/hx";
-    };
+    packages = with pkgs; [ vesktop ];
+    sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
 
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    image = ./wallpaper.jpg;
+    targets = {
+      starship.enable = false;
+      helix.enable = false;
+      yazi.enable = false;
+    };
+    fonts = {
+      serif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Serif";
+      };
+
+      sansSerif = {
+        package = pkgs.dejavu_fonts;
+        name = "DejaVu Sans";
+      };
+
+      monospace = {
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrains Mono Nerd Font";
+      };
+    };
+  };
+  
   programs = {
     fd.enable = true;
     git.enable = true;
     ripgrep.enable = true;
     home-manager.enable = true;
     fzf.enable = true;
+    wezterm = {
+      enable = true;
+      extraConfig = builtins.readFile ./wezterm.lua;
+    };
 
+    helix = {
+      enable = true;
+      defaultEditor = true;
+      settings = {
+        theme = "rose_pine";
+        editor = {
+          line-number = "relative";
+          scrolloff = 100;
+          mouse = false;
+          popup-border = "all";
+          end-of-line-diagnostics = "hint";
+          cursor-shape.insert = "bar";
+          indent-guides.render = true;
+          inline-diagnostics.cursor-line = "warning";
+          insert-final-newline = false;
+          lsp = {
+            display-inlay-hints = true;
+            display-progress-messages = true;
+          };
+          auto-save = {
+            focus-lost = true;
+            after-delay.enable = true;
+          };
+        };
+      };
+      extraPackages = with pkgs; [
+        nil
+        nixd
+        marksman
+        bash-language-server
+        markdownlint-cli2
+        marksman
+      ];
+    };
     fastfetch = {
       enable = true;
       settings = {
@@ -143,12 +206,6 @@ rec {
         use_kitty_protocol = true;
       };
 
-      environmentVariables = {
-        EDITOR = "${pkgs.helix}/bin/hx";
-        GIT_EDITOR = "${pkgs.helix}/bin/hx";
-        NIX_USER_CONF_FILES = "${home.homeDirectory}/.config/nix";
-      };
-
       shellAliases = {
         vi = "${pkgs.helix}/bin/hx";
         vim = "${pkgs.helix}/bin/hx";
@@ -163,6 +220,9 @@ rec {
 
       extraEnv = ''
         #! /bin/nu
+        $env.EDITOR = "${pkgs.helix}/bin/hx";
+        $env.GIT_EDITOR = "${pkgs.helix}/bin/hx";
+        $env.NIX_USER_CONF_FILES = "$\"($env.HOME)/.config/nix\"";
         $env.PATH = $env.PATH | append [ '/var/lib/flatpak/exports/bin' ]
       '';
 
@@ -201,15 +261,25 @@ rec {
         export def nixos-rbld [
           --update-flake(-u) # Update the flake before updating the configuration
         ] {
-          rm -rf $"($env.HOME)/.gtkrc-2.0"
           cd $"($env.HOME)/projects/nixos-config/my-config"
           if $update_flake {
             sudo nix flake update
           }
-          sudo nixos-rebuild switch --flake $".#((open config.toml).user.name)" --impure
+          sudo nixos-rebuild switch --flake $".#${user.username}" --impure
           if ((git status --short) | str length) != 0 {
             lazygit
           }
+        }
+
+        export def home-rbld [
+          --update-flake(-u) # Update the flake before updating the configuration
+        ] {
+          rm $"($env.HOME)/.gtkrc-2.0"  $"($env.HOME)/.gtkrc-2.0.backup"
+          cd $"($env.HOME)/projects/nixos-config/home-manager"
+          if $update_flake {
+            nix flake update
+          }
+          home-manager switch --flake ".#${user.username}"
         }
 
         fastfetch
