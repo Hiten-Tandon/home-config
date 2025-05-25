@@ -7,7 +7,7 @@
   home = {
     inherit (user) username;
     stateVersion = "25.05";
-    packages = with pkgs; [ vesktop lazygit ];
+    packages = with pkgs; [ vesktop lazygit signal-desktop-source ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
 
