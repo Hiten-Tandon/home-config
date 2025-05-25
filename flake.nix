@@ -4,6 +4,7 @@
   inputs = {
     home-manager.url = "github:nix-community/home-manager";
     flake-utils.url = "github:numtide/flake-utils";
+    zen.url = "github:Hiten-Tandon/twilight-zen-browser-flake";
   };
 
   outputs =
@@ -11,12 +12,16 @@
       home-manager,
       flake-utils,
       nixpkgs,
+      zen,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [zen.overlay];
+        };
         configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
       in
