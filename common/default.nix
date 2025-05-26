@@ -249,6 +249,18 @@
       extraConfig = ''
         #! /bin/nu
         # clone a repo
+        export def analyze-startup [] {
+          systemd-analyze blame
+            | lines
+            | each { str trim | split column " " }
+            | flatten
+            | each {
+              {
+                service : $in.column2,
+                time : ($in.column1 | str replace -r "[^m]s$" "sec" | into duration)
+              }
+            }
+        }
         export def --env clone-repo [
           repo: string, # The service provider and repo to clone (ex: github:Hiten-Tandon/my-nixos-distro)
           target?: string, # The target directory
