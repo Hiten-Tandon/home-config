@@ -29,6 +29,7 @@
       starship.enable = false;
       helix.enable = false;
       yazi.enable = false;
+      vesktop.enable = false;
     };
     fonts = {
       serif = {
