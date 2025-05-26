@@ -26,9 +26,13 @@
       let
         pkgs = import nixpkgs {
           inherit system;
-          overlays = [ zen.overlay fdm.overlay (_: self: {
-            wezterm = wezterm.outputs.packages.${self.system}.default;
-          }) ];
+          overlays = [
+            zen.overlay
+            fdm.overlay
+            (_: self: {
+              wezterm = wezterm.outputs.packages.${self.system}.default;
+            })
+          ];
         };
         configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
@@ -41,7 +45,10 @@
             inherit user;
           };
           modules =
-            [ stylix.homeModules.stylix ./common ]
+            [
+              stylix.homeModules.stylix
+              ./common
+            ]
             ++ lib.optional stdenv.isLinux ./linux
             ++ lib.optional stdenv.isDarwin ./darwin
             ++ lib.optional stdenv.isBSD ./bsd
