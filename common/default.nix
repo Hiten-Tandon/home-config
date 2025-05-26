@@ -97,10 +97,7 @@
               y = "@xy";
             };
           };
-          select = {
-            Esc = ":exit_select_mode";
-            G = "@ge";
-          };
+          select.G = "@ge";
         };
         theme = "rose_pine";
       };
