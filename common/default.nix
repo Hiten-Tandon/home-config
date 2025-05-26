@@ -63,28 +63,47 @@
       enable = true;
       defaultEditor = true;
       settings = {
-        theme = "rose_pine";
         editor = {
-          line-number = "relative";
-          scrolloff = 100;
-          mouse = false;
-          popup-border = "all";
-          end-of-line-diagnostics = "hint";
+          auto-save = {
+            after-delay.enable = true;
+            focus-lost = true;
+          };
           cursor-shape.insert = "bar";
+          end-of-line-diagnostics = "hint";
           indent-guides.render = true;
           inline-diagnostics.cursor-line = "warning";
           insert-final-newline = false;
+          line-number = "relative";
           lsp = {
             display-inlay-hints = true;
             display-progress-messages = true;
           };
-          auto-save = {
-            focus-lost = true;
-            after-delay.enable = true;
+          mouse = false;
+          popup-border = "all";
+          scrolloff = 100;
+        };
+        keys = {
+          insert.C-s = ":w!";
+          normal = {
+            A-r = ":config-reload";
+            C-s = ":w!";
+            G = "@ge";
+            H = ":bp";
+            L = ":bn";
+            space = {
+              q = ":q";
+              space = "@<space>f";
+              w = ":w!";
+              y = "@xy";
+            };
+          };
+          select = {
+            Esc = ":exit_select_mode";
+            G = "@ge";
           };
         };
+        theme = "rose_pine";
       };
-      extraPackages = with pkgs; [ ];
     };
     fastfetch = {
       enable = true;
