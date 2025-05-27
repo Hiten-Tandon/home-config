@@ -17,6 +17,7 @@
       bash-language-server
       markdownlint-cli2
       marksman
+      glab
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
