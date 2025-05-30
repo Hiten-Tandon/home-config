@@ -56,6 +56,7 @@
     ripgrep.enable = true;
     home-manager.enable = true;
     fzf.enable = true;
+
     wezterm = {
       enable = true;
       extraConfig = builtins.readFile ./wezterm.lua;
@@ -311,7 +312,7 @@
             rm $"($env.HOME)/.gtkrc-2.0"
             rm $"($env.HOME)/.gtkrc-2.0.backup"
           }
-          cd $"($env.HOME)/projects/nixos-config/home-manager"
+          cd ${./.}
           if $update_flake {
             nix flake update
           }
