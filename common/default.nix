@@ -312,7 +312,7 @@
             rm $"($env.HOME)/.gtkrc-2.0"
             rm $"($env.HOME)/.gtkrc-2.0.backup"
           }
-          cd ${./.}
+          cd $"($env.HOME)/projects/nixos-config/home-manager"
           if $update_flake {
             nix flake update
           }
