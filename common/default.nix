@@ -18,6 +18,7 @@
       markdownlint-cli2
       marksman
       glab
+      vivid
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
@@ -246,6 +247,7 @@
         $env.GIT_EDITOR = "${pkgs.helix}/bin/hx";
         $env.NIX_USER_CONF_FILES = "$\"($env.HOME)/.config/nix\"";
         $env.PATH = $env.PATH | append [ '/var/lib/flatpak/exports/bin' ]
+        $env.LS_COLORS = (vivid generate rose-pine)
       '';
 
       extraConfig = ''
