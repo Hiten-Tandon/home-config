@@ -7,6 +7,8 @@
       free-download-manager
       wl-clipboard-rs
       kde-rounded-corners
+      cron
+      cronutils
     ];
   };
 }
