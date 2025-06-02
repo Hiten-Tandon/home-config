@@ -1,0 +1,39 @@
+name: flake-update
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-flake-lock:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push changes
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # We'll set up credentials manually
+
+      - name: Set up Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Install Nix
+        uses: DeterminateSystems/determinate-nix-action@v3.5.2
+
+      - name: Update flake.lock
+        uses: DeterminateSystems/update-flake-lock@v25
+
+      - name: Commit changes
+        run: |
+          git add flake.lock
+          git commit -m "chore: update flake.lock [skip ci]" || echo "No changes to commit"
+
+      - name: Push changes
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
