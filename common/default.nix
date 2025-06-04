@@ -57,6 +57,11 @@
     ripgrep.enable = true;
     home-manager.enable = true;
     fzf.enable = true;
+    obs-studio.enable = true;
+    nh = {
+      enable = true;
+      clean.enable = true;
+    };
 
     wezterm = {
       enable = true;
