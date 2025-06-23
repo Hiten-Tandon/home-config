@@ -19,6 +19,7 @@
       marksman
       glab
       vivid
+      home-manager
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
@@ -55,7 +56,6 @@
     fd.enable = true;
     git.enable = true;
     ripgrep.enable = true;
-    home-manager.enable = true;
     fzf.enable = true;
     obs-studio.enable = true;
 
@@ -342,7 +342,7 @@
       };
       extensions = with pkgs; [
         gh-eco
-        (stdenv.mkDerivation (
+        (stdenv.mkDerivation 
           (finalAttrs: {
             src = fetchFromGitHub {
               owner = "mislav";
@@ -365,7 +365,7 @@
               license = lib.licenses.unlicense;
             };
           })
-        ))
+        )
       ];
     };
 
