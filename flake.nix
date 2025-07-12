@@ -8,6 +8,7 @@
     wezterm.url = "github:wezterm/wezterm?dir=nix";
     stylix.url = "github:danth/stylix";
     fdm.url = "github:hiten-tandon/freedownloadmanager-nix";
+    nixcord.url = "github:kaylorben/nixcord";
   };
 
   outputs =
@@ -19,6 +20,7 @@
       stylix,
       zen,
       fdm,
+      nixcord,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -47,6 +49,7 @@
           modules =
             [
               stylix.homeModules.stylix
+              nixcord.homeModules.nixcord
               ./common
             ]
             ++ lib.optional stdenv.isLinux ./linux
