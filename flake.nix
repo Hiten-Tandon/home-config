@@ -2,6 +2,7 @@
   description = "This is for home-manager";
 
   inputs = {
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/25.05";
     home-manager.url = "github:nix-community/home-manager";
     flake-utils.url = "github:numtide/flake-utils";
     zen.url = "github:Hiten-Tandon/twilight-zen-browser-flake";
@@ -17,6 +18,7 @@
       flake-utils,
       wezterm,
       nixpkgs,
+      nixpkgs-stable,
       stylix,
       zen,
       fdm,
@@ -36,6 +38,16 @@
             })
           ];
         };
+        stable = import nixpkgs-stable {
+          inherit system;
+          overlays = [
+            zen.overlay
+            fdm.overlay
+            (_: self: {
+              wezterm = wezterm.outputs.packages.${self.system}.default;
+            })
+          ];
+        };
         configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
       in
@@ -44,7 +56,7 @@
         legacyPackages.homeConfigurations.${user.username} = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           extraSpecialArgs = {
-            inherit user;
+            inherit user stable;
           };
           modules =
             [
