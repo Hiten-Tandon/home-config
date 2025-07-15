@@ -67,13 +67,26 @@
     nixcord = {
       enable = true;
       discord = {
-        enable = true;
+        enable = false;
         branch = "canary";
         vencord = {
           enable = true;
           unstable = true;
         };
         openASAR.enable = true;
+      };
+      vesktop.enable = true;
+      dorion = {
+        enable = false;
+        blur = "none";
+        cacheCss = true;
+        desktopNotifications = true;
+        multiInstance = true;
+        openOnStartup = true;
+        sysTray = true;
+        streamerModeDetection = true;
+        useNativeTitlebar = true;
+        package = pkgs.dorion;
       };
       quickCss = ''
         /**
@@ -388,6 +401,7 @@
             customEngineName = "DuckDuckGo";
             customEngineURL = "https://duckduckgo.com";
           };
+          webKeybinds.enable = true;
         };
       };
     };
