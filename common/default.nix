@@ -58,6 +58,7 @@
     ripgrep.enable = true;
     fzf.enable = true;
     obs-studio.enable = true;
+    mpv.enable = true;
 
     nh = {
       enable = true;
@@ -720,6 +721,18 @@
       settings = (pkgs.lib.importTOML ./starship.toml);
       enableNushellIntegration = true;
       enableBashIntegration = true;
+    };
+
+    freetube = {
+      enable = true;
+      settings = {
+        checkForUpdates = false;
+        defaultQuality = "1080";
+        useSponsorBlock = true;
+        useDeArrowTitles = true;
+        useDeArrowThumbnails = true;
+        externalPlayer = "mpv";       
+      };
     };
 
     zoxide = {
