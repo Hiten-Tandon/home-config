@@ -408,10 +408,12 @@
     };
 
     wezterm = {
-      enable = true;
+      enable = false; #broken
       extraConfig = builtins.readFile ./wezterm.lua;
     };
 
+    ghostty.enable = true;
+    
     helix = {
       enable = true;
       defaultEditor = true;
