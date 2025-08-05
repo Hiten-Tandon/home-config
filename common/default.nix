@@ -412,7 +412,15 @@
       extraConfig = builtins.readFile ./wezterm.lua;
     };
 
-    ghostty.enable = true;
+    ghostty = {
+      enable = true;
+      settings = {
+        font-family = "JetBrainsMono Nerd Font";
+        font-size = 16;
+        gtk-adwaita = false;
+        focus-follows-mouse = true;
+      };
+    };
     
     helix = {
       enable = true;
