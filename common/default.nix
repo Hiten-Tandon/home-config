@@ -27,6 +27,17 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";
+    icons = {
+      enable = true;
+      dark = "Papirus";
+      light = "Papirus";
+      package = pkgs.papirus-icon-theme;
+    };
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Ice";
+      size = 24;
+    };
     image = ./wallpaper.jpg;
     targets = {
       starship.enable = false;
@@ -403,12 +414,13 @@
             customEngineURL = "https://duckduckgo.com";
           };
           webKeybinds.enable = true;
+          volumeBooster.enable = true;
         };
       };
     };
 
     wezterm = {
-      enable = false; #broken
+      enable = false; # broken
       extraConfig = builtins.readFile ./wezterm.lua;
     };
 
@@ -421,7 +433,7 @@
         focus-follows-mouse = true;
       };
     };
-    
+
     helix = {
       enable = true;
       defaultEditor = true;
@@ -743,7 +755,7 @@
         useSponsorBlock = true;
         useDeArrowTitles = true;
         useDeArrowThumbnails = true;
-        externalPlayer = "mpv";       
+        externalPlayer = "mpv";
       };
     };
 

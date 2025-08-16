@@ -58,16 +58,15 @@
           extraSpecialArgs = {
             inherit user stable;
           };
-          modules =
-            [
-              stylix.homeModules.stylix
-              nixcord.homeModules.nixcord
-              ./common
-            ]
-            ++ lib.optional stdenv.isLinux ./linux
-            ++ lib.optional stdenv.isDarwin ./darwin
-            ++ lib.optional stdenv.isBSD ./bsd
-            ++ lib.optional stdenv.isCygwin ./cygwin;
+          modules = [
+            stylix.homeModules.stylix
+            nixcord.homeModules.nixcord
+            ./common
+          ]
+          ++ lib.optional stdenv.isLinux ./linux
+          ++ lib.optional stdenv.isDarwin ./darwin
+          ++ lib.optional stdenv.isBSD ./bsd
+          ++ lib.optional stdenv.isCygwin ./cygwin;
         };
         formatter = nixfmt-tree;
       }
