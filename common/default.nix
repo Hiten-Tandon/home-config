@@ -20,6 +20,7 @@
       glab
       vivid
       home-manager
+      libreoffice-qt6-fresh
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
