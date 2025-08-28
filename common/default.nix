@@ -80,7 +80,7 @@
     nixcord = {
       enable = true;
       discord = {
-        enable = false;
+        enable = true;
         branch = "canary";
         vencord = {
           enable = true;
@@ -88,7 +88,8 @@
         };
         openASAR.enable = true;
       };
-      vesktop.enable = true;
+      # Disabled while broken
+      # vesktop.enable = true;
       dorion = {
         enable = false;
         blur = "none";
