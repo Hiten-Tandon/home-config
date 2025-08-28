@@ -81,12 +81,7 @@
       enable = true;
       discord = {
         enable = true;
-        branch = "canary";
-        vencord = {
-          enable = true;
-          unstable = true;
-        };
-        openASAR.enable = true;
+        vencord.enable = true;
       };
       # Disabled while broken
       # vesktop.enable = true;
