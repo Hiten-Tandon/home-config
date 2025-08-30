@@ -83,8 +83,7 @@
         enable = true;
         vencord.enable = true;
       };
-      # Disabled while broken
-      # vesktop.enable = true;
+      vesktop.enable = true;
       dorion = {
         enable = false;
         blur = "none";
