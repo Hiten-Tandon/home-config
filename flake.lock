@@ -329,11 +329,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1756261190,
-        "narHash": "sha256-eiy0klFK5EVJLNilutR7grsZN/7Itj9DyD75eyOf83k=",
+        "lastModified": 1756669196,
+        "narHash": "sha256-E/l+K8WIjbH5AUv/B17RX1hzx1CsuPaT86g1xDwiYY8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "77f348da3176dc68b20a73dab94852a417daf361",
+        "rev": "b4b5f008d772c0e8e9c420cfa0d240a447747e0a",
         "type": "github"
       },
       "original": {
@@ -378,11 +378,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1756430462,
-        "narHash": "sha256-7eyB++u0w76rIeWK9Ro0m9xA6x1RUrTwkLWQG4FF2oE=",
+        "lastModified": 1756516619,
+        "narHash": "sha256-iWNyhVIBO/CxQdLeQAfedynD68+SmIq5lj/TJpJyUSA=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "6224976ea28552c7dc0ceaa189e7d9a5b80875f6",
+        "rev": "eed47b8dc6601e94f0b4ce71bfea349869b541c0",
         "type": "github"
       },
       "original": {
@@ -440,11 +440,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1755615617,
-        "narHash": "sha256-HMwfAJBdrr8wXAkbGhtcby1zGFvs+StOp19xNsbqdOg=",
+        "lastModified": 1756542300,
+        "narHash": "sha256-tlOn88coG5fzdyqz6R93SQL5Gpq+m/DsWpekNFhqPQk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "20075955deac2583bb12f07151c2df830ef346b4",
+        "rev": "d7600c775f877cd87b4f5a831c28aa94137377aa",
         "type": "github"
       },
       "original": {
@@ -472,11 +472,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1756381814,
-        "narHash": "sha256-tzo7YvAsGlzo4WiIHT0ooR59VHu+aKRQdHk7sIyoia4=",
+        "lastModified": 1756636162,
+        "narHash": "sha256-mBecwgUTWRgClJYqcF+y4O1bY8PQHqeDpB+zsAn+/zA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "aca2499b79170038df0dbaec8bf2f689b506ad32",
+        "rev": "37ff64b7108517f8b6ba5705ee5085eac636a249",
         "type": "github"
       },
       "original": {
@@ -518,11 +518,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1756266583,
-        "narHash": "sha256-cr748nSmpfvnhqSXPiCfUPxRz2FJnvf/RjJGvFfaCsM=",
+        "lastModified": 1756542300,
+        "narHash": "sha256-tlOn88coG5fzdyqz6R93SQL5Gpq+m/DsWpekNFhqPQk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8a6d5427d99ec71c64f0b93d45778c889005d9c2",
+        "rev": "d7600c775f877cd87b4f5a831c28aa94137377aa",
         "type": "github"
       },
       "original": {
@@ -812,11 +812,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1756473927,
-        "narHash": "sha256-4MW/307koJpGokVOPbd398s3raNdd5KbZXh4cUOrDbs=",
+        "lastModified": 1756680403,
+        "narHash": "sha256-InMY4dX9OGMeujOtB22njkrR5rL4gMHLysC4btqqr84=",
         "owner": "Hiten-Tandon",
         "repo": "twilight-zen-browser-flake",
-        "rev": "a200383322e1eccaeb39b1004f0ff8d636d01c63",
+        "rev": "6c6a996774dd6e00fef4b9f9c570e7971998ac9a",
         "type": "github"
       },
       "original": {
@@ -828,8 +828,8 @@
     "zen-browser": {
       "flake": false,
       "locked": {
-        "lastModified": 1756426559,
-        "narHash": "sha256-p7EocT87KX94VYBmr8r0Y3jjH+SsiLGUFAxrR7pek18=",
+        "lastModified": 1756598461,
+        "narHash": "sha256-V8V7GumBPQp/kZDUkw96OTOC/M6IIuf6JmvJmuTnsLo=",
         "type": "tarball",
         "url": "https://github.com/zen-browser/desktop/releases/download/twilight/zen.linux-x86_64.tar.xz"
       },
