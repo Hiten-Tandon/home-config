@@ -1,4 +1,11 @@
 {
+  nixConfig = {
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    extra-experimental-features = [ "pipe-operators" ];
+  };
   description = "This is for home-manager";
 
   inputs = {
