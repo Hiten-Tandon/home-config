@@ -425,7 +425,6 @@
       settings = {
         font-family = "JetBrainsMono Nerd Font";
         font-size = 16;
-        gtk-adwaita = false;
         focus-follows-mouse = true;
       };
     };
