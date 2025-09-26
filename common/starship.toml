@@ -12,6 +12,7 @@ $nodejs\
 $rust\
 $golang\
 $php\
+$nix_shell\
 [](fg:#26233a bg:#2a273f)\
 $time\
 [](fg:#2a273f)\
@@ -80,3 +81,8 @@ disabled = false
 time_format = "%R"
 style = "bg:#584951"
 format = '[[   $time ](fg:#908caa bg:#2a273f)]($style)'
+
+[nix_shell]
+symbol = "  Dev Shell"
+style = "bg:#26233a"
+format = '[[ $symbol ($version) ](fg:#908caa bg:#26233a)]($style)'
