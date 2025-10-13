@@ -10,7 +10,7 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       lazygit
-      signal-desktop-source
+      signal-desktop-bin
       nil
       nixd
       marksman
