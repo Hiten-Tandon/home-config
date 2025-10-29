@@ -9,6 +9,7 @@
       kde-rounded-corners
       cron
       cronutils
+     	nur.repos.shadowrz.klassy-qt6
     ];
   };
 }

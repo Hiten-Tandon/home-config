@@ -17,6 +17,7 @@
     stylix.url = "github:danth/stylix";
     fdm.url = "github:hiten-tandon/freedownloadmanager-nix";
     nixcord.url = "github:kaylorben/nixcord";
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs =
@@ -30,6 +31,7 @@
       zen,
       fdm,
       nixcord,
+      nur,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -43,6 +45,7 @@
             (_: self: {
               wezterm = wezterm.outputs.packages.${self.system}.default;
             })
+            nur.overlays.default
           ];
         };
         stable = import nixpkgs-stable {
@@ -53,6 +56,7 @@
             (_: self: {
               wezterm = wezterm.outputs.packages.${self.system}.default;
             })
+            nur.overlays.default
           ];
         };
         configTOML = builtins.fromTOML (builtins.readFile ./config.toml);

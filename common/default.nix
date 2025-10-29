@@ -21,6 +21,7 @@
       vivid
       home-manager
       libreoffice-qt6-fresh
+      kde-rounded-corners
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
