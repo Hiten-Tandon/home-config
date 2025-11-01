@@ -1,6 +1,7 @@
 {
   pkgs,
   user,
+  stable,
   ...
 }:
 {
@@ -84,7 +85,10 @@
         enable = true;
         vencord.enable = true;
       };
-      vesktop.enable = true;
+      vesktop = {
+        enable = true;
+        package = stable.vesktop;
+      };
       dorion = {
         enable = false;
         blur = "none";
