@@ -556,11 +556,11 @@
     },
     "nixpkgs_8": {
       "locked": {
-        "lastModified": 1761672384,
-        "narHash": "sha256-o9KF3DJL7g7iYMZq9SWgfS1BFlNbsm6xplRjVlOCkXI=",
+        "lastModified": 1762596750,
+        "narHash": "sha256-rXXuz51Bq7DHBlfIjN7jO8Bu3du5TV+3DSADBX7/9YQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "08dacfca559e1d7da38f3cf05f1f45ee9bfd213c",
+        "rev": "b6a8526db03f735b89dd5ff348f53f752e7ddc8e",
         "type": "github"
       },
       "original": {
@@ -576,11 +576,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1762777089,
-        "narHash": "sha256-xkfMKJ8nY8X/QCn4IIbxvIHRk/Ic/+3UjIeR0hxnOuw=",
+        "lastModified": 1762778769,
+        "narHash": "sha256-lsnFGqf0U+PTiHHfNVXka9tov1nj7A6LeT22tLrl5zA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "9ad8bfa54b9ecbc4af7b3e0bb30ea19d156adb75",
+        "rev": "f1137b0be6aaf81ba4ee0ab3e06aa25fdb1012e0",
         "type": "github"
       },
       "original": {
@@ -870,11 +870,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1761951623,
-        "narHash": "sha256-icgBXx9wHgWT2TqsBkIaIkq3qXxnP2NROXBRn9NISE8=",
+        "lastModified": 1762778604,
+        "narHash": "sha256-pdeOVR02DvPZcW3XmgRiWLVDnjnhoSvVi85e9rU3tI4=",
         "owner": "Hiten-Tandon",
         "repo": "twilight-zen-browser-flake",
-        "rev": "9532173c69dce9bb47df80c7fe97779647faba91",
+        "rev": "7a5a51e558a1836d3d6b68e915ca2a2db4ba8f2a",
         "type": "github"
       },
       "original": {
@@ -886,8 +886,8 @@
     "zen-browser": {
       "flake": false,
       "locked": {
-        "lastModified": 1761783237,
-        "narHash": "sha256-7UaVHKB5nx3N2HXzxHjmtd74bU4p228pybVneInE9cs=",
+        "lastModified": 1762732645,
+        "narHash": "sha256-wiF2dfGDwAkGGlr7LlPbSDCaJRXNazBWUTr0f8DK7xw=",
         "type": "tarball",
         "url": "https://github.com/zen-browser/desktop/releases/download/twilight/zen.linux-x86_64.tar.xz"
       },
