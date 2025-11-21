@@ -410,11 +410,6 @@
           fakeNitro.enable = true;
           fixImagesQuality.enable = true;
           forceOwnerCrown.enable = true;
-          replaceGoogleSearch = {
-            enable = true;
-            customEngineName = "DuckDuckGo";
-            customEngineURL = "https://duckduckgo.com";
-          };
           webKeybinds.enable = true;
           volumeBooster.enable = true;
         };
