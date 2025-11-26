@@ -43,7 +43,7 @@
             zen.overlay
             fdm.overlay
             (_: self: {
-              wezterm = wezterm.outputs.packages.${self.system}.default;
+              wezterm = wezterm.outputs.packages.${self.stdenv.system}.default;
             })
             nur.overlays.default
           ];

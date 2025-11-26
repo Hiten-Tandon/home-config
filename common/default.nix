@@ -83,7 +83,7 @@
     nixcord = {
       enable = true;
       discord = {
-        enable = true;
+        enable = false;
         vencord.enable = true;
       };
       vesktop = {
@@ -403,10 +403,8 @@
           betterUploadButton.enable = true;
           biggerStreamPreview.enable = true;
           callTimer.enable = true;
-          clearURLs.enable = true;
           consoleJanitor.enable = true;
           copyFileContents.enable = true;
-          copyUserURLs.enable = true;
           fakeNitro.enable = true;
           fixImagesQuality.enable = true;
           forceOwnerCrown.enable = true;
@@ -762,4 +760,5 @@
       options = [ "--cmd cd" ];
     };
   };
+
 }
