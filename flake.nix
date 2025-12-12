@@ -10,6 +10,7 @@
 
   inputs = {
     nixpkgs-stable.url = "github:NixOS/nixpkgs/25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
     flake-utils.url = "github:numtide/flake-utils";
     zen.url = "github:Hiten-Tandon/twilight-zen-browser-flake";
