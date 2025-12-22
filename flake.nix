@@ -48,6 +48,7 @@
             })
             nur.overlays.default
           ];
+          config.allowUnfree = true;
         };
         stable = import nixpkgs-stable {
           inherit system;

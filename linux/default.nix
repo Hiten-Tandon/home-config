@@ -4,7 +4,7 @@
     homeDirectory = "/home/${user.username}";
     packages = with pkgs; [
       zen
-      free-download-manager
+      # free-download-manager
       wl-clipboard-rs
       cron
       cronutils
