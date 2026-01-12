@@ -17,7 +17,7 @@
     wezterm.url = "github:wezterm/wezterm?dir=nix";
     stylix.url = "github:danth/stylix";
     fdm.url = "github:hiten-tandon/freedownloadmanager-nix";
-    nixcord.url = "github:kaylorben/nixcord";
+    nixcord.url = "github:FlameFlag/nixcord";
     nur.url = "github:nix-community/NUR";
   };
 
