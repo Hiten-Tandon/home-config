@@ -331,6 +331,8 @@
         lla = "ls -la";
       };
 
+      plugins = with pkgs.nushellPlugins; [ formats polars query gstat ];
+
       extraEnv = ''
         #! /bin/nu
         $env.EDITOR = "${pkgs.helix}/bin/hx";
