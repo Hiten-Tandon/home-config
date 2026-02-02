@@ -82,12 +82,13 @@
     nixcord = {
       enable = true;
       discord = {
-        enable = false;
+        enable = true;
         vencord.enable = true;
+        package = pkgs.discord-canary;
       };
       vesktop = {
         enable = true;
-        package = stable.vesktop;
+        package = pkgs.vesktop;
       };
       dorion = {
         enable = false;
