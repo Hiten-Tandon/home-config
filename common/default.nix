@@ -73,6 +73,7 @@
     fzf.enable = true;
     obs-studio.enable = true;
     mpv.enable = true;
+    darcs.enable = true;
 
     nh = {
       enable = true;
