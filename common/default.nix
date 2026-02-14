@@ -1,7 +1,6 @@
 {
   pkgs,
   user,
-  stable,
   ...
 }:
 {
@@ -22,6 +21,7 @@
       vivid
       home-manager
       libreoffice-qt6-fresh
+      pandoc
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
