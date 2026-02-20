@@ -22,6 +22,7 @@
       home-manager
       libreoffice-qt6-fresh
       pandoc
+      fluffychat
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
