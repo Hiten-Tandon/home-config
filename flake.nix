@@ -19,6 +19,7 @@
     fdm.url = "github:hiten-tandon/freedownloadmanager-nix";
     nixcord.url = "github:FlameFlag/nixcord";
     nur.url = "github:nix-community/NUR";
+    extera-next.url = "gitlab:Hiten-Tandon/extera-next-nix-wrapper";
   };
 
   outputs =
@@ -33,6 +34,7 @@
       fdm,
       nixcord,
       nur,
+      extera-next,
       ...
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -43,9 +45,15 @@
           overlays = [
             zen.overlay
             fdm.overlay
-            (_: self: {
-              wezterm = wezterm.outputs.packages.${self.stdenv.system}.default;
-            })
+            (
+              _: self:
+              {
+                wezterm = wezterm.outputs.packages.${system}.default;
+              }
+              // (self.lib.optionalAttrs (system == "x86_64-linux") {
+                extera-next = extera-next.outputs.packages.${system}.default;
+              })
+            )
             nur.overlays.default
           ];
           config.allowUnfree = true;
@@ -61,7 +69,7 @@
             nur.overlays.default
           ];
         };
-        configTOML = builtins.fromTOML (builtins.readFile ./config.toml);
+        configTOML = fromTOML (builtins.readFile ./config.toml);
         user = configTOML.user;
       in
       with pkgs;

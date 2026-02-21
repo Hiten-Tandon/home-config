@@ -22,7 +22,7 @@
       home-manager
       libreoffice-qt6-fresh
       pandoc
-      fluffychat
+      extera-next
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
@@ -335,7 +335,12 @@
         lla = "ls -la";
       };
 
-      plugins = with pkgs.nushellPlugins; [ formats polars query gstat ];
+      plugins = with pkgs.nushellPlugins; [
+        formats
+        polars
+        query
+        gstat
+      ];
 
       extraEnv = ''
         #! /bin/nu
