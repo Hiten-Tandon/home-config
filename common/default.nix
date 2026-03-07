@@ -114,7 +114,7 @@
         useQuickCss = true;
         plugins = {
           betterFolders = {
-            enable = true;
+            enable = false;
             closeAllFolders = true;
             closeAllHomeButton = true;
             closeOthers = true;
