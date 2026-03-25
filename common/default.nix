@@ -67,6 +67,8 @@
     };
   };
 
+  gtk.gtk4.theme = null;
+  
   programs = {
     fd.enable = true;
     git.enable = true;
