@@ -88,12 +88,8 @@
       discord = {
         enable = true;
         vencord.enable = true;
-        package = pkgs.discord-canary;
       };
-      vesktop = {
-        enable = true;
-        package = pkgs.vesktop;
-      };
+      vesktop.enable = true;
       dorion = {
         enable = false;
         blur = "none";
