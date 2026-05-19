@@ -120,7 +120,6 @@
             keepIcons = true;
           };
           betterGifPicker.enable = true;
-          betterNotesBox.enable = true;
           betterRoleContext.enable = true;
           betterSessions.enable = true;
           betterSettings.enable = true;
