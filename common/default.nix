@@ -23,6 +23,9 @@
       libreoffice-qt6-fresh
       pandoc
       extera-next
+      proton-authenticator
+      proton-vpn
+      proton-pass
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
