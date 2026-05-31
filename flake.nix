@@ -18,7 +18,10 @@
     flake-utils.url = "github:numtide/flake-utils";
     zen.url = "github:Hiten-Tandon/twilight-zen-browser-flake";
     wezterm.url = "github:wezterm/wezterm?dir=nix";
-    stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     fdm.url = "github:hiten-tandon/freedownloadmanager-nix";
     nixcord.url = "github:FlameFlag/nixcord";
     nur.url = "github:nix-community/NUR";
