@@ -11,7 +11,10 @@
   inputs = {
     nixpkgs-stable.url = "github:NixOS/nixpkgs/25.11";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils.url = "github:numtide/flake-utils";
     zen.url = "github:Hiten-Tandon/twilight-zen-browser-flake";
     wezterm.url = "github:wezterm/wezterm?dir=nix";
