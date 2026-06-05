@@ -26,6 +26,7 @@
       proton-authenticator
       proton-vpn
       proton-pass
+      easyeffects
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
