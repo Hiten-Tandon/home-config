@@ -91,7 +91,10 @@
         enable = true;
         vencord.enable = true;
       };
-      vesktop.enable = true;
+      vesktop = {
+        enable = true;
+        package = pkgs.vesktop;
+      };
       dorion = {
         enable = false;
         blur = "none";
