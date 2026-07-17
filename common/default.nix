@@ -42,11 +42,11 @@
       light = "Papirus";
       package = pkgs.papirus-icon-theme;
     };
-    cursor = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 24;
-    };
+    # cursor = {
+    #   package = pkgs.bibata-cursors;
+    #   name = "Bibata-Modern-Ice";
+    #   size = 24;
+    # };
     image = ./wallpaper.jpg;
     targets = {
       starship.enable = false;
