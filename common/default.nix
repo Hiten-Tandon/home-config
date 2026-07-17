@@ -1,6 +1,7 @@
 {
   pkgs,
   user,
+  stable,
   ...
 }:
 {
@@ -93,7 +94,7 @@
       };
       vesktop = {
         enable = true;
-        package = pkgs.vesktop;
+        package = stable.vesktop;
       };
       dorion = {
         enable = false;
