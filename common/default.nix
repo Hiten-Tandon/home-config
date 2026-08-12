@@ -154,6 +154,7 @@
         font-family = "JetBrainsMono Nerd Font";
         font-size = 16;
         focus-follows-mouse = true;
+        background-opacity = 0.5;
       };
     };
 
