@@ -28,6 +28,7 @@
       proton-vpn
       proton-pass
       easyeffects
+      fetch
     ];
     sessionVariables.GIT_EDITOR = "${pkgs.helix}/bin/hx";
   };
@@ -202,7 +203,7 @@
       };
     };
     fastfetch = {
-      enable = true;
+      enable = false;
       settings = {
         logo.source = "nixos";
         display.separator = " : ";
@@ -429,7 +430,7 @@
           }
         }
 
-        fastfetch
+        fetch --infinite
       '';
     };
 
