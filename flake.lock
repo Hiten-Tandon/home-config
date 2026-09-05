@@ -391,11 +391,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1787797243,
-        "narHash": "sha256-8+Q7NOB7RPajRjA4pbCDLzqH+MTjnG9x6LUPLfL2joA=",
+        "lastModified": 1788487777,
+        "narHash": "sha256-Ro/e1N4ZR8/XaFF+sF9SgfPK79HM5YNEppzFj8p+0Ak=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "99c9ec63390f1d8c14d95d9e8b17cc29cfbd4e11",
+        "rev": "693e8ce0fb240a73c116a03cfd7b19269c87af88",
         "type": "github"
       },
       "original": {
@@ -441,11 +441,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1787932216,
-        "narHash": "sha256-OPJDo+mIHErjQL/uaclMFvgSkQeInH2MFGxT93+VXps=",
+        "lastModified": 1788512400,
+        "narHash": "sha256-pFiwb+c/lIvMvjSzJONZ+jPi36kbbljys7OFy+Kxt3U=",
         "owner": "FlameFlag",
         "repo": "nixcord",
-        "rev": "5b36c9187cabf90cb1659045c354cd6a0dd349ff",
+        "rev": "004e2c950c0b4a404fb3ea5ab01f5645265e4322",
         "type": "github"
       },
       "original": {
@@ -551,11 +551,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1787736819,
-        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
+        "lastModified": 1788404924,
+        "narHash": "sha256-lhEhY8X5EgkQ/eg6IFz4cc8jRuSYSvnxx1al7d1dvZ0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
+        "rev": "0968519e14f7aa7d3e9b389682bd74d2b51c8ce8",
         "type": "github"
       },
       "original": {
@@ -567,11 +567,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1787736819,
-        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
+        "lastModified": 1788404924,
+        "narHash": "sha256-lhEhY8X5EgkQ/eg6IFz4cc8jRuSYSvnxx1al7d1dvZ0=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
+        "rev": "0968519e14f7aa7d3e9b389682bd74d2b51c8ce8",
         "type": "github"
       },
       "original": {
@@ -599,11 +599,11 @@
     },
     "nixpkgs_7": {
       "locked": {
-        "lastModified": 1787736819,
-        "narHash": "sha256-cV5xEJJK3BvhU8rEd4mC9UsmDi5qscv/kzGPhBRC5WA=",
+        "lastModified": 1788179007,
+        "narHash": "sha256-hn1oU2rue2SYK8dAr8+WNZWtbsz1S2W5mnHlSEuh3bo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9fbb54b33e91ee4ca368e35a78e0613c720600b3",
+        "rev": "34ab99075ac4f7e40cf037eef32cb1c360bb85e9",
         "type": "github"
       },
       "original": {
@@ -619,11 +619,11 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1787976708,
-        "narHash": "sha256-wLYjL+eTziUCc3XWAYMLfPUFkU/Amu4REOM+XmgpyP8=",
+        "lastModified": 1788577766,
+        "narHash": "sha256-ahHohw6adsV6789nif2qbvDrUWFzyzw3OMdiq1JoWT8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "5b10c778e8ebe969c5bb76e3c81720c4cbe2d951",
+        "rev": "a8c26129efa25b4f0639bc1fb4a2aad18b47f744",
         "type": "github"
       },
       "original": {
@@ -914,11 +914,11 @@
       },
       "locked": {
         "dir": "nix",
-        "lastModified": 1787905075,
-        "narHash": "sha256-s2yfq7NMdli+ouIrW/O4xfyN/EM6n/XCCckXw1MjHis=",
+        "lastModified": 1788525331,
+        "narHash": "sha256-heWaojC3GVsHUlpCOi9gfcxlpd+cyoLzVeXBgvzdcBM=",
         "owner": "wezterm",
         "repo": "wezterm",
-        "rev": "27d55bef144f34a73e23585302838a36ec3aa30e",
+        "rev": "d4f5c4878a7f72b3fa53ff963a1fea790810d31a",
         "type": "github"
       },
       "original": {
@@ -935,11 +935,11 @@
         "zen-browser": "zen-browser"
       },
       "locked": {
-        "lastModified": 1787977053,
-        "narHash": "sha256-5DO8130AHwwz3kaDtRBmKRWPLumHP9RrI5egUyQs7w8=",
+        "lastModified": 1788401785,
+        "narHash": "sha256-VaPdb3uAKRlOI7VcoEy+f7SOur+LT59HYhySnbaC7F8=",
         "owner": "Hiten-Tandon",
         "repo": "twilight-zen-browser-flake",
-        "rev": "2f32eb6a46c4deac6c4d85fab7e17a7aaafe0dc4",
+        "rev": "dbc7d75e5b8b73b75a0dc4aba10368dbcc0b929c",
         "type": "github"
       },
       "original": {
@@ -951,8 +951,8 @@
     "zen-browser": {
       "flake": false,
       "locked": {
-        "lastModified": 1787886097,
-        "narHash": "sha256-H/RNbqO1M7nENbHeainGWMqdkYHxNFWykrbMCmWgsfk=",
+        "lastModified": 1788313666,
+        "narHash": "sha256-JfYRzLTeqLBXE7sMWsL6KvHrAnd5EaRi0rsJg+72T1s=",
         "type": "tarball",
         "url": "https://github.com/zen-browser/desktop/releases/download/twilight-1/zen.linux-x86_64.tar.xz"
       },
