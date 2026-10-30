@@ -10,6 +10,7 @@
     inherit (user) username;
     stateVersion = "25.05";
     packages = with pkgs; [
+      zettlr
       lazygit
       signal-desktop
       nil
